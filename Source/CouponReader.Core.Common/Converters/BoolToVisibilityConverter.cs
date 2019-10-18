@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows;
-using System.Windows.Data;
 
 namespace CouponReader.Common.Converters
 {
-    public class BoolToVisibilityConverter : IValueConverter
+    public class BoolToVisibilityConverter : System.Windows.Data.IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

@@ -99,121 +99,121 @@ namespace CouponReader.Common.Services
                 {
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-20).AddMinutes(30),
+                        Date = DateTime.Now.AddMinutes(30).AddDays(20),
                         Coupon = Coupons[0]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-19).AddMinutes(25),
+                        Date = DateTime.Now.AddMinutes(25).AddDays(19),
                         Coupon = Coupons[1]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-18).AddMinutes(15),
+                        Date = DateTime.UtcNow.AddDays(18).AddMinutes(15),
                         Coupon = Coupons[2]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-17).AddMinutes(45),
+                        Date = DateTime.Now.AddMinutes(45).AddDays(17),
                         Coupon = Coupons[3]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-16).AddMinutes(50),
+                        Date = DateTime.Now.AddMinutes(50).AddDays(16),
                         Coupon = Coupons[4]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-15).AddMinutes(30),
+                        Date = DateTime.UtcNow.AddDays(15).AddMinutes(30),
                         Coupon = Coupons[0]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-14).AddMinutes(25),
+                        Date = DateTime.UtcNow.AddDays(14).AddMinutes(25),
                         Coupon = Coupons[1]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-13).AddMinutes(15),
+                        Date = DateTime.UtcNow.AddDays(13).AddMinutes(15),
                         Coupon = Coupons[2]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-12).AddMinutes(45),
+                        Date = DateTime.UtcNow.AddDays(12).AddMinutes(45),
                         Coupon = Coupons[3]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-11).AddMinutes(50),
+                        Date = DateTime.UtcNow.AddDays(11).AddMinutes(50),
                         Coupon = Coupons[4]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-10).AddMinutes(30),
+                        Date = DateTime.UtcNow.AddDays(10).AddMinutes(30),
                         Coupon = Coupons[0]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-9).AddMinutes(25),
+                        Date = DateTime.UtcNow.AddDays(9).AddMinutes(25),
                         Coupon = Coupons[1]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-8).AddMinutes(15),
+                        Date = DateTime.UtcNow.AddDays(8).AddMinutes(15),
                         Coupon = Coupons[2]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-7).AddMinutes(45),
+                        Date = DateTime.UtcNow.AddDays(7).AddMinutes(45),
                         Coupon = Coupons[3]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-6).AddMinutes(50),
+                        Date = DateTime.UtcNow.AddDays(6).AddMinutes(50),
                         Coupon = Coupons[4]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-5).AddMinutes(50),
+                        Date = DateTime.UtcNow.AddDays(5).AddMinutes(50),
                         Coupon = Coupons[4]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-4).AddMinutes(50),
+                        Date = DateTime.UtcNow.AddDays(4).AddMinutes(50),
                         Coupon = Coupons[0]
                     },
                     
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-3).AddMinutes(50),
+                        Date = DateTime.UtcNow.AddDays(3).AddMinutes(50),
                         Coupon = Coupons[1]
                     },
                     
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-2).AddMinutes(50),
+                        Date = DateTime.UtcNow.AddDays(2).AddMinutes(50),
                         Coupon = Coupons[2]
                     },
 
                     new CouponHistory()
                     {
-                        Date = DateTime.Now.AddDays(-1).AddMinutes(50),
+                        Date = DateTime.UtcNow.AddDays(1).AddMinutes(50),
                         Coupon = Coupons[3]
                     }
                 };
