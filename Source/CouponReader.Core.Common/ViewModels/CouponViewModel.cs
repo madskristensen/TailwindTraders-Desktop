@@ -10,13 +10,13 @@ namespace CouponReader.Common.ViewModels
     {
         bool expired;
 
-        public string Title { get; set; }
-        public string Username { get; set; }
-        public string User { get; set; }
-        public string CouponImage { get; set; }
-        public string CouponText { get; set; }
-        public string Expiration { get; set; }
-        public bool ReadyToRedeem { get; set; }
+		public string Title { get; set; }
+		public string Username { get; set; }
+		public string User { get; set; }
+		public string CouponImage { get; set; }
+		public string CouponText { get; set; }
+		public string Expiration { get; set; }
+		public bool ReadyToRedeem { get; set; }
 
         public bool Expired
         {
