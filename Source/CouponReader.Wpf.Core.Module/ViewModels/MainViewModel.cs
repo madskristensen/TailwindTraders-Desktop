@@ -55,6 +55,7 @@ namespace CouponReader.Wpf.Module.ViewModels
         public DelegateCommand HistoryCommand =>
             _historyCommand ?? (_historyCommand = new DelegateCommand(ExecuteHistory));
 
+        [System.Obsolete]
         public InteractionRequest<INotification> NotificationRequest { get; set; }
 
         public void OnNavigatedTo(NavigationContext navigationContext)

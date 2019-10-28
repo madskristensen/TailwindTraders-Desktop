@@ -28,17 +28,17 @@ namespace CouponReader.Common.Services
             {
                 return new List<Coupon>
                 {
-                    new Coupon()
-                    {
-                        ExternalId = new Guid("09fb6ed0-7998-4111-ad6c-dfbb39b1a3cf"),
-                        Code = "Code10",
-                        CouponText = "10& Off power tools",
-                        Redeemed = false,
-                        User = "Annick B. Addison",
-                        UserName = "cbaddison1",
-                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_1.png",
-                        Expiration = DateTime.Now.AddYears(2)
-                    },
+					new Coupon()
+					{
+						ExternalId = new Guid("09fb6ed0-7998-4111-ad6c-dfbb39b1a3cf"),
+						Code = "Code10",
+						CouponText = "10& Off power tools",
+						Redeemed = false,
+						User = "Annick B. Addison",
+						UserName = "cbaddison1",
+						ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_1.png",
+						Expiration = DateTime.Now.AddYears(2)
+					},
 
                     new Coupon()
                     {
