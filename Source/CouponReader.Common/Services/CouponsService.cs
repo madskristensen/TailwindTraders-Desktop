@@ -221,8 +221,14 @@ namespace CouponReader.Common.Services
             }
         }
 
+        public bool GetIsCouponHistoryValid()
+        {
+            return true;
+        }
+
         public Coupon FindCouponByCode(string code)
         {
+            var isValid = GetIsCouponHistoryValid();
             // TODO: Live Unit Testing
             return Coupons.FirstOrDefault(x => x.Code.Equals(code, StringComparison.InvariantCultureIgnoreCase));
         }
