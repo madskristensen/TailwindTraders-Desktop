@@ -221,6 +221,8 @@ namespace CouponReader.Common.Services
             }
         }
 
+        public bool IsCouponHistoryValid { get; }
+
         public Coupon FindCouponByCode(string code)
         {
             // TODO: Live Unit Testing
