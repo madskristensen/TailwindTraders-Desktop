@@ -240,7 +240,7 @@ namespace CouponReader.Common.Services
 
         public Coupon FindCouponByCode(string code)
         {
-            var isValid = GetIsCouponHistoryValid();
+            var isValid = GetRecentValidHistory();
             // TODO: Live Unit Testing
             return Coupons.FirstOrDefault(x => x.Code.Equals(code, StringComparison.InvariantCultureIgnoreCase));
         }
