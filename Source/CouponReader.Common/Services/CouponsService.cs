@@ -7,90 +7,13 @@ namespace CouponReader.Common.Services
 {
     public class CouponsService
     {
-        private static CouponsService instance;
-
-        public static CouponsService Instance
+        public IEnumerable<CouponHistory> GetRecentValidHistory()
         {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new CouponsService();
-                }
+            var recent = CouponHistory.Where(c => c.Date > DateTime.UtcNow.AddDays(30));
 
-                return instance;
-            }
+            return recent;
         }
-
-        public List<Coupon> Coupons
-        {
-            get
-            {
-                return new List<Coupon>
-                {
-                    new Coupon()
-                    {
-                        ExternalId = new Guid("09fb6ed0-7998-4111-ad6c-dfbb39b1a3cf"),
-                        Code = "Code10",
-                        CouponText = "10& Off power tools",
-                        Redeemed = false,
-                        User = "Annick B. Addison",
-                        UserName = "cbaddison1",
-                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_1.png",
-                        Expiration = DateTime.Now.AddYears(2)
-                    },
-
-                    new Coupon()
-                    {
-                        ExternalId = new Guid("08fb6ed0-7998-4111-ad6c-dfbb39b1a3cf"),
-                        Code = "Code50",
-                        CouponText = "50% Off on pipelines",
-                        Redeemed = true,
-                        User = "Mathew Y. Rosendahl",
-                        UserName = "lusi_123",
-                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_2.png",
-                        Expiration = DateTime.Now.AddYears(2).AddHours(7)
-                    },
-
-                    new Coupon()
-                    {
-                        ExternalId = new Guid("56c8369f-d0e9-4df9-8458-f4d4d074b1ec"),
-                        Code = "Code20D",
-                        CouponText = "$20 Off for your Appliances",
-                        Redeemed = true,
-                        User = "Gillian Carter",
-                        UserName = "thecarter",
-                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_3.png",
-                        Expiration = DateTime.Now.AddYears(2).AddHours(6)
-                    },
-
-                    new Coupon()
-                    {
-                        ExternalId = new Guid("6ba26946-9ed5-4510-9a8b-0bb955f67a02"),
-                        Code = "Code20P",
-                        CouponText = "20% Off on bathroom",
-                        Redeemed = true,
-                        User = "Jack Bains",
-                        UserName = "bains_12345",
-                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_4.png",
-                        Expiration = DateTime.Now.AddYears(2)
-                    },
-
-                    new Coupon()
-                    {
-                        ExternalId = new Guid("88a009c4-19c3-438d-9ec1-944dbf22e858"),
-                        Code = "Code20D2",
-                        CouponText = "$20 Off for your next purchase",
-                        Redeemed = true,
-                        User = "Javier Suárez",
-                        UserName = "jsuarez",
-                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_5.png",
-                        Expiration = DateTime.Now.AddYears(2).AddHours(5)
-                    }
-                };
-            }
-        }
-
+        
         public List<CouponHistory> CouponHistory
         {
             get
@@ -218,6 +141,90 @@ namespace CouponReader.Common.Services
                     }
                 };
                 return history;
+            }
+        }
+
+        private static CouponsService instance;
+
+        public static CouponsService Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new CouponsService();
+                }
+
+                return instance;
+            }
+        }
+
+        public List<Coupon> Coupons
+        {
+            get
+            {
+                return new List<Coupon>
+                {
+                    new Coupon()
+                    {
+                        ExternalId = new Guid("09fb6ed0-7998-4111-ad6c-dfbb39b1a3cf"),
+                        Code = "Code10",
+                        CouponText = "10& Off power tools",
+                        Redeemed = false,
+                        User = "Annick B. Addison",
+                        UserName = "cbaddison1",
+                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_1.png",
+                        Expiration = DateTime.Now.AddYears(2)
+                    },
+
+                    new Coupon()
+                    {
+                        ExternalId = new Guid("08fb6ed0-7998-4111-ad6c-dfbb39b1a3cf"),
+                        Code = "Code50",
+                        CouponText = "50% Off on pipelines",
+                        Redeemed = true,
+                        User = "Mathew Y. Rosendahl",
+                        UserName = "lusi_123",
+                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_2.png",
+                        Expiration = DateTime.Now.AddYears(2).AddHours(7)
+                    },
+
+                    new Coupon()
+                    {
+                        ExternalId = new Guid("56c8369f-d0e9-4df9-8458-f4d4d074b1ec"),
+                        Code = "Code20D",
+                        CouponText = "$20 Off for your Appliances",
+                        Redeemed = true,
+                        User = "Gillian Carter",
+                        UserName = "thecarter",
+                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_3.png",
+                        Expiration = DateTime.Now.AddYears(2).AddHours(6)
+                    },
+
+                    new Coupon()
+                    {
+                        ExternalId = new Guid("6ba26946-9ed5-4510-9a8b-0bb955f67a02"),
+                        Code = "Code20P",
+                        CouponText = "20% Off on bathroom",
+                        Redeemed = true,
+                        User = "Jack Bains",
+                        UserName = "bains_12345",
+                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_4.png",
+                        Expiration = DateTime.Now.AddYears(2)
+                    },
+
+                    new Coupon()
+                    {
+                        ExternalId = new Guid("88a009c4-19c3-438d-9ec1-944dbf22e858"),
+                        Code = "Code20D2",
+                        CouponText = "$20 Off for your next purchase",
+                        Redeemed = true,
+                        User = "Javier Suárez",
+                        UserName = "jsuarez",
+                        ImageUrl = "https://tailwindtraders.blob.core.windows.net/desktop/Coupon_5.png",
+                        Expiration = DateTime.Now.AddYears(2).AddHours(5)
+                    }
+                };
             }
         }
 
