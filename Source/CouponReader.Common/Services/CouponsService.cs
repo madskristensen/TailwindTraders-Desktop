@@ -9,11 +9,16 @@ namespace CouponReader.Common.Services
     {
         public IEnumerable<CouponHistory> GetRecentValidHistory()
         {
-            var recent = CouponHistory.Where(c => c.Date > DateTime.UtcNow.AddDays(30));
+            var isValid = GetIsCouponHistoryValid();
+            
+            if (isValid)
+            {
+                return CouponHistory.Where(c => c.Date > DateTime.UtcNow.AddDays(30));
+            }
 
-            return recent;
+            return Enumerable.Empty<CouponHistory>();
         }
-        
+
         public List<CouponHistory> CouponHistory
         {
             get
@@ -121,13 +126,13 @@ namespace CouponReader.Common.Services
                         Date = DateTime.Now.AddDays(-4).AddMinutes(50),
                         Coupon = Coupons[0]
                     },
-                    
+
                     new CouponHistory()
                     {
                         Date = DateTime.Now.AddDays(-3).AddMinutes(50),
                         Coupon = Coupons[1]
                     },
-                    
+
                     new CouponHistory()
                     {
                         Date = DateTime.Now.AddDays(-2).AddMinutes(50),

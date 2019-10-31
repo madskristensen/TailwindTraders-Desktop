@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using CouponReader.Common.Models;
 
@@ -7,12 +8,16 @@ namespace CouponReader.Common.Services
 {
     public class CouponsService
     {
-  
         public IEnumerable<CouponHistory> GetRecentValidHistory()
         {
-            var recent = CouponHistory.Where(c => c.Date > DateTime.UtcNow.AddDays(30));
+            var isValid = GetIsCouponHistoryValid();
 
-            return recent;
+            if (isValid)
+            {
+                return CouponHistory.Where(c => c.Date > DateTime.UtcNow.AddDays(30));
+            }
+
+            return Enumerable.Empty<CouponHistory>();
         }
 
         public List<CouponHistory> CouponHistory
