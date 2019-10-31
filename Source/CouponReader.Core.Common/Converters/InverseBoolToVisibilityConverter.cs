@@ -13,8 +13,8 @@ namespace CouponReader.Common.Converters
             {
                 if (boolVal)
                 {
+                    return Visibility.Collapsed;
                 }
-                return Visibility.Collapsed;
             }
 
             return Visibility.Visible;
